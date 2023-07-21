@@ -1,0 +1,31 @@
+<div class="flex bg-background w-screen h-screen overflow-hidden ">
+    <app-menu></app-menu>
+    <div class="bg-background flex flex-col items-center h-screen overflow-y-scroll flex-grow">
+        <header class="max-w-[90vw] w-[400px] m-5 text-text text-3xl font-semibold">Search</header>
+        <div
+            class="search max-w-[90vw] w-[400px] rounded-md h-[35px] bg-text bg-opacity-20 items-center flex p-3 gap-3">
+            <fa-icon [icon]="faMagnifyingGlass" class="text-text"></fa-icon>
+            <input type="text" name="" id="" class="bg-[#00000000] w-full outline-none border-none text-text">
+        </div>
+        <br>
+        <div class="max-w-[90vw] w-[500px] border-b-[1.2px] border-b-text border-opacity-20 p-2 flex justify-between gap-4 mt-3"
+            *ngFor="let item of Search">
+            <img class="avtar w-[35px] h-[35px] rounded-full" src={{item.image}} />
+            <div class="content flex flex-col">
+                <div class="name text-text flex items-center gap-1">
+                    <span class="text-sm">{{item.username}}</span>
+                    <div class="relative flex items-center justify-center ml-2" *ngIf="item.verified">
+                        <fa-icon [icon]="faCertificate" class="text-[#334ed5] z-10 absolute">
+                        </fa-icon>
+                        <fa-icon [icon]="faCheck" class="text-text text-[9px] font-semibold absolute z-20"></fa-icon>
+                    </div>
+                </div>
+                <div class="name text-text text-opacity-30 text-xs">{{item.name}}</div>
+                <div class="h-[10px]"></div>
+                <div class="name text-text text-xs">{{item.followers}} followers</div>
+            </div>
+            <div class="flex-grow"></div>
+            <div class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text">Follow</div>
+        </div>
+    </div>
+</div>

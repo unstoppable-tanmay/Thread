@@ -1,0 +1,9 @@
+<div class="flex bg-background w-screen h-screen overflow-hidden ">
+    <app-menu></app-menu>
+    <div class="bg-background flex flex-col items-center h-screen overflow-y-scroll flex-grow">
+        <header class="w-9 h-w-9 mb-5 mt-3"><img src="../../assets/logo.png" class="invert" alt=""></header>
+        <div class="flex items-center flex-col" *ngFor="let feed of Feeds">
+            <app-post [feed]=feed></app-post> <!-- Feed That is Defined in post component -->
+        </div>
+    </div>
+</div>

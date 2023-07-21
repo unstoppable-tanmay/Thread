@@ -1,0 +1,42 @@
+<div
+    class="menu lg:min-w-[250px] h-screen border-e-[1px] border-e-background-light border-opacity-20 hidden  flex-shrink items-center lg:items-start md:flex flex-col p-5 gap-10 lg:pl-10">
+    <div class="heading font-semibold w-full hidden lg:flex justify-center text-3xl text-text mb-2">Threads</div>
+    <div class="heading font-semibold w-full lg:hidden flex justify-center text-3xl text-text mb-2"><img
+            src="../../../assets/logo.png" class="invert w-10 h-10" alt=""></div>
+    <a routerLink="/home" class="text-text flex gap-4 text-xl">
+        <fa-icon [icon]="faHouse"></fa-icon>
+        <div class="hidden lg:flex">Home</div>
+    </a>
+    <a routerLink="/search" class="text-text flex gap-4 text-xl">
+        <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+        <div class="hidden lg:flex">Search</div>
+    </a>
+    <a routerLink="/thread" class="text-text flex gap-4 text-xl">
+        <fa-icon [icon]="faPenToSquare"></fa-icon>
+        <div class="hidden lg:flex">Thread</div>
+    </a>
+    <a routerLink="/likes" class="text-text flex gap-4 text-xl">
+        <fa-icon [icon]="faHeart"></fa-icon>
+        <div class="hidden lg:flex">Likes</div>
+    </a>
+    <a routerLink="/profile" class="text-text flex gap-4 text-xl">
+        <fa-icon [icon]="faUser"></fa-icon>
+        <div class="hidden lg:flex">Profile</div>
+    </a>
+    <div class="flex flex-grow"></div>
+    <div class="text-text flex gap-4 text-xl">
+        <fa-icon [icon]="faRightFromBracket"></fa-icon>
+        <div class="hidden lg:flex">Logout</div>
+    </div>
+</div>
+
+<div
+    class="md:hidden flex absolute w-full h-[60px] bg-background bottom-0 ml-auto mr-auto left-0 right-0 justify-center p-6 z-50">
+    <div class="flex text-text items-center justify-around text-2xl w-full max-w-[400px] gap-5">
+        <a href="home"><fa-icon [icon]="faHouse"></fa-icon></a>
+        <a href="search"><fa-icon [icon]="faMagnifyingGlass"></fa-icon></a>
+        <a href="thread"><fa-icon [icon]="faPenToSquare"></fa-icon></a>
+        <a href="likes"><fa-icon [icon]="faHeart"></fa-icon></a>
+        <a href="profile"><fa-icon [icon]="faUser"></fa-icon></a>
+    </div>
+</div>

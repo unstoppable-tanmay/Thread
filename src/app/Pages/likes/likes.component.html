@@ -1,0 +1,50 @@
+<div class="flex bg-background w-screen h-screen overflow-hidden ">
+    <app-menu></app-menu>
+    <div class="bg-background flex flex-col items-center h-screen overflow-y-scroll flex-grow pt-7">
+        <header class="font-semibold text-2xl text-text mb-4">
+            Activity
+        </header>
+        <div class="scrollbar-none">
+            <div class="max-w-[100vw] px-4 h-auto overflow-scroll mb-3 flex gap-3 scrollbar-none">
+                <div
+                    class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text-light-light bg-background-light">
+                    All</div>
+                <div
+                    class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text">
+                    Follows</div>
+                <div
+                    class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text">
+                    Replies</div>
+                <div
+                    class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text">
+                    Mention</div>
+                <div
+                    class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text">
+                    Quotes</div>
+                <div
+                    class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text">
+                    Reposts</div>
+                <div
+                    class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text">
+                    Verified</div>
+            </div>
+        </div>
+        <div class="max-w-[90vw] w-[500px] border-b-[1.2px] border-b-text border-opacity-20 p-3 mb-3 flex justify-between gap-4"
+            *ngFor="let item of Search">
+            <img class="avtar w-[45px] h-[45px] rounded-full" src={{item.image}} />
+            <div class="content flex flex-col">
+                <div class="name text-text text-sm">
+                    {{item.username}} &nbsp;
+                    <span class=" text-text text-opacity-40">2 d</span>
+                </div>
+                <div class="name text-text text-opacity-30 text-xs mt-1">Followed you</div>
+            </div>
+            <div class="flex-grow"></div>
+            <div
+                class="follow border-[1.8px] text-sm border-background-light border-opacity-20 h-[30px] px-5 flex items-center justify-center rounded-lg text-text">
+                Follow</div>
+        </div>
+    </div>
+</div>
+
+<!-- Tanmay  -->
