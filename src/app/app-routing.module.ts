@@ -8,7 +8,7 @@ import { LikesComponent } from './Pages/likes/likes.component';
 import { ProfileComponent } from './Pages/profile/profile.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'thread', component: AddComponent },
   { path: 'likes', component: LikesComponent },
